@@ -1,0 +1,6 @@
+framework module Pods_BanterTests {
+  umbrella header "Pods-BanterTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
