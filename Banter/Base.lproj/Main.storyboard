@@ -89,6 +89,7 @@
                     <connections>
                         <outlet property="emailTextField" destination="vWq-RG-QLW" id="Dya-dh-IC8"/>
                         <outlet property="passwordTextField" destination="yh4-AA-AxG" id="Flb-FG-pNX"/>
+                        <outlet property="signInButton" destination="9mT-OI-bR5" id="yjZ-K4-wgn"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fod-Bu-bVi" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -190,7 +191,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hBi-P6-KwC">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hBi-P6-KwC">
                                                     <rect key="frame" x="26" y="11" width="79" height="21"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="21" id="2s6-IO-fnR"/>
@@ -261,7 +262,7 @@
                         </connections>
                     </tableView>
                     <connections>
-                        <outlet property="usernameLabel" destination="ExR-bK-ZMR" id="Kcy-7s-1TJ"/>
+                        <outlet property="emailLabel" destination="ExR-bK-ZMR" id="lR6-EO-fbg"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SPm-W1-6Jc" userLabel="First Responder" sceneMemberID="firstResponder"/>

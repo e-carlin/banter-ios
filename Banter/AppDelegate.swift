@@ -8,13 +8,9 @@
 
 import UIKit
 import AWSCognitoIdentityProvider
-import AWSCore //For regions
 
-let CognitoIdentityUserPoolId = "us-east-1_VU4GdCuOZ" //TODO: Get this from cognitoconfig.plist
-let CognitoIdentityUserPoolRegion = AWSRegionType.USEast1
-let CognitoIdentityUserPoolAppClientId = "6lode4fmj73ntvi00f2qimsq0v"
-let CognitoIdentityUserPoolAppClientSecret = "r17oa40gjn85g1vjthaqt0nmfkldn1td3apd4rquh2rnb56i4hi"
 let AWSCognitoUserPoolsSignInProviderKey = "UserPool"
+var cognitoConfig:CognitoConfig?
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -30,27 +26,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
-        // Warn user if configuration not updated
-        if (CognitoIdentityUserPoolId == "YOUR_USER_POOL_ID") {
-            let alertController = UIAlertController(title: "Invalid Configuration",
-                                                    message: "Please configure user pool constants in Constants.swift file.",
-                                                    preferredStyle: .alert)
-            let okAction = UIAlertAction(title: "Ok", style: .default, handler: nil)
-            alertController.addAction(okAction)
-            
-            self.window?.rootViewController!.present(alertController, animated: true, completion:  nil)
-        }
+        //Setup Cognito config
+        self.cognitoConfig = CognitoConfig()
         
         // setup logging
         AWSDDLog.sharedInstance.logLevel = .verbose
         
         // setup service configuration
-        let serviceConfiguration = AWSServiceConfiguration(region: CognitoIdentityUserPoolRegion, credentialsProvider: nil)
+        let serviceConfiguration = AWSServiceConfiguration(region: self.cognitoConfig!.getRegion(), credentialsProvider: nil)
         
         // create pool configuration
-        let poolConfiguration = AWSCognitoIdentityUserPoolConfiguration(clientId: CognitoIdentityUserPoolAppClientId,
-                                                                        clientSecret: CognitoIdentityUserPoolAppClientSecret,
-                                                                        poolId: CognitoIdentityUserPoolId)
+        let poolConfiguration = AWSCognitoIdentityUserPoolConfiguration(clientId: self.cognitoConfig!.getClientId(),
+                                                                        clientSecret: self.cognitoConfig!.getClientSecret(),
+                                                                        poolId: self.cognitoConfig!.getPoolId())
         
         // initialize user pool client
         AWSCognitoIdentityUserPool.register(with: serviceConfiguration, userPoolConfiguration: poolConfiguration, forKey: AWSCognitoUserPoolsSignInProviderKey)

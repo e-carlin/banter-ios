@@ -122,6 +122,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		DE52AB71200BEA99002A79C2 /* CognitoConfig */ = {
+			isa = PBXGroup;
+			children = (
+				DED5F14B1FFE018100F83129 /* CognitoConfig.plist */,
+				DED5F1491FFE00ED00F83129 /* CognitoConfig.swift */,
+			);
+			path = CognitoConfig;
+			sourceTree = "<group>";
+		};
 		DEDF7D6E1FFC71CA004207F6 = {
 			isa = PBXGroup;
 			children = (
@@ -147,10 +156,9 @@
 		DEDF7D791FFC71CA004207F6 /* Banter */ = {
 			isa = PBXGroup;
 			children = (
+				DE52AB71200BEA99002A79C2 /* CognitoConfig */,
 				DEDF7D7A1FFC71CA004207F6 /* AppDelegate.swift */,
-				DED5F1491FFE00ED00F83129 /* CognitoConfig.swift */,
 				DEB4523C200B318500C3B692 /* SignInViewController.swift */,
-				DED5F14B1FFE018100F83129 /* CognitoConfig.plist */,
 				DEDF7DAA1FFC7217004207F6 /* SignUpViewController.swift */,
 				DEB45240200B3D3400C3B692 /* DisplayUserViewController.swift */,
 				DEDF7D7E1FFC71CA004207F6 /* Main.storyboard */,

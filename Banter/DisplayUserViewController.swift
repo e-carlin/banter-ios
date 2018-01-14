@@ -11,7 +11,7 @@ import AWSCognitoIdentityProvider
 
 class DisplayUserViewController: UITableViewController {
     
-    @IBOutlet weak var usernameLabel: UILabel!
+    @IBOutlet weak var emailLabel: UILabel!
     
     var user:AWSCognitoIdentityUser?
     var userAttributes:[AWSCognitoIdentityProviderAttributeType]?
@@ -28,7 +28,6 @@ class DisplayUserViewController: UITableViewController {
     func fetchUserAttributes() {
         self.resetAttributeValues()
         user = self.pool!.currentUser()
-        print("USER: \(user)")
         user?.getDetails().continueOnSuccessWith(block: { (task) -> Any? in
             guard task.result != nil else {
                 return nil
@@ -45,11 +44,11 @@ class DisplayUserViewController: UITableViewController {
     }
     
     func resetAttributeValues() {
-        self.usernameLabel.text = ""
+        self.emailLabel.text = ""
     }
     
     func setAttributeValues() {
-        self.usernameLabel.text = self.user?.username
+        self.emailLabel.text = valueForAttribute(name: "email")
     }
     
     func valueForAttribute(name:String) -> String? {
