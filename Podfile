@@ -6,8 +6,10 @@ target 'Banter' do
   use_frameworks!
 
   # Pods for Banter
-  pod 'Firebase/Core'
-  pod 'Firebase/Auth'
+#  pod 'Firebase/Core'
+#  pod 'Firebase/Auth'
+pod 'AWSCore', '~> 2.6.10'
+pod 'AWSCognitoIdentityProvider', '~> 2.6.10'
 
   target 'BanterTests' do
     inherit! :search_paths

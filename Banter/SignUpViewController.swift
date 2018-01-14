@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import Firebase
+import AWSCognitoIdentityProvider
 
 class SignUpViewController: UIViewController {
     
@@ -15,12 +15,59 @@ class SignUpViewController: UIViewController {
     @IBOutlet var emailTextField: UITextField!
     @IBOutlet var passwordTextField: UITextField!
     
+    var pool: AWSCognitoIdentityUserPool?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.title = "Sign Up"
-        nameTextField.becomeFirstResponder()
+        self.pool = AWSCognitoIdentityUserPool.init(forKey: AWSCognitoUserPoolsSignInProviderKey)
+    }
+    
+    @IBAction func registerAccount(sender: UIButton) {
+        // Validate the input
+        guard let name = nameTextField.text, name != "",
+            let emailAddress = emailTextField.text, emailAddress != "",
+            let password = passwordTextField.text, password != "" else {
+                let alertController = UIAlertController(title: "Registration Error", message: "Please make sure you provide your name, email address and password to complete the registration.", preferredStyle: .alert)
+                let okayAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+                alertController.addAction(okayAction)
+                present(alertController, animated: true, completion: nil)
+                return
+        }
+        
+        var attributes = [AWSCognitoIdentityUserAttributeType]()
+        
+        let email = AWSCognitoIdentityUserAttributeType()
+        email?.name = "email"
+        email?.value = emailAddress
+        attributes.append(email!)
+        
+        //sign up the user
+        self.pool?.signUp(emailAddress, password: password, userAttributes: attributes, validationData: nil).continueWith {[weak self] (task) -> Any? in
+            guard let strongSelf = self else { return nil }
+            DispatchQueue.main.async(execute: {
+                if let error = task.error as NSError? {
+                    let alertController = UIAlertController(title: error.userInfo["__type"] as? String,
+                                                            message: error.userInfo["message"] as? String,
+                                                            preferredStyle: .alert)
+                    let retryAction = UIAlertAction(title: "Retry", style: .default, handler: nil)
+                    alertController.addAction(retryAction)
+                    
+                    self?.present(alertController, animated: true, completion:  nil)
+                } else if let result = task.result  {
+                    // handle the case where user has to confirm his identity via email / SMS
+                    if (result.user.confirmedStatus != AWSCognitoIdentityUserStatus.confirmed) {
+                        print("***** USER MUST BE CONFIRMED THIS IS WHERE I SHOULD SEND TO CONFIRM VIEW")
+                    } else {
+                        print("***** SIGN UP SUCCESS!")
+                        let _ = strongSelf.navigationController?.popToRootViewController(animated: true)
+                    }
+                }
+                
+            })
+            return nil
+    }
     }
     
     //    override func didReceiveMemoryWarning() {
@@ -39,56 +86,5 @@ class SignUpViewController: UIViewController {
     //
     //        self.navigationController?.setNavigationBarHidden(true, animated: true)
     //    }
-    
-    @IBAction func registerAccount(sender: UIButton) {
-        // Validate the input
-        guard let name = nameTextField.text, name != "",
-            let emailAddress = emailTextField.text, emailAddress != "",
-            let password = passwordTextField.text, password != "" else {
-                let alertController = UIAlertController(title: "Registration Error", message: "Please make sure you provide your name, email address and password to complete the registration.", preferredStyle: .alert)
-                let okayAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
-                alertController.addAction(okayAction)
-                present(alertController, animated: true, completion: nil)
-                return
-        }
-        // Register the user account on Firebase
-        Auth.auth().createUser(withEmail: emailAddress, password: password, completion: { (user, error) in
-                if let error = error {
-                    let alertController = UIAlertController(title: "Registration Error", message: error.localizedDescription, preferredStyle: .alert)
-                    let okayAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
-                    alertController.addAction(okayAction)
-                    self.present(alertController, animated: true, completion: nil)
-                    return
-                }
-                // Save the name of the user
-                if let changeRequest = Auth.auth().currentUser?.createProfileChangeRequest() {
-                    changeRequest.displayName = name
-                    changeRequest.commitChanges(completion: { (error) in
-                        if let error = error {
-                            print("Failed to change the display name: \(error.localizedDescription)")
-                        }
-                    })
-                }
-                // Dismiss keyboard
-                self.view.endEditing(true)
-                // Present the main view
-                if let viewController = self.storyboard?.instantiateViewController(withIdentifier: "MainView") {
-                    UIApplication.shared.keyWindow?.rootViewController = viewController
-                    self.dismiss(animated: true, completion: nil)
-                }
-        })
-    }
-    
-    
-    /*
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destinationViewController.
-     // Pass the selected object to the new view controller.
-     }
-     */
-    
 }
 

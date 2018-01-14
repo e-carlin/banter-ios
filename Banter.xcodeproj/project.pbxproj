@@ -10,17 +10,18 @@
 		2D7A9B6F97C21F7706342012 /* Pods_Banter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF29EB05F599D152D1234C3B /* Pods_Banter.framework */; };
 		9D5109D51FE2804987ED06F6 /* Pods_BanterUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F23ED0413754EC446FEC59E2 /* Pods_BanterUITests.framework */; };
 		A2FCF523251B7E0F0DFF2A57 /* Pods_BanterTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F14244CE9C6C255757DB60C /* Pods_BanterTests.framework */; };
+		DEB4523D200B318500C3B692 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB4523C200B318500C3B692 /* SignInViewController.swift */; };
+		DEB45241200B3D3400C3B692 /* DisplayUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB45240200B3D3400C3B692 /* DisplayUserViewController.swift */; };
+		DED5F14A1FFE00ED00F83129 /* CognitoConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = DED5F1491FFE00ED00F83129 /* CognitoConfig.swift */; };
+		DED5F14C1FFE018100F83129 /* CognitoConfig.plist in Resources */ = {isa = PBXBuildFile; fileRef = DED5F14B1FFE018100F83129 /* CognitoConfig.plist */; };
 		DEDF7D7B1FFC71CA004207F6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEDF7D7A1FFC71CA004207F6 /* AppDelegate.swift */; };
 		DEDF7D801FFC71CA004207F6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DEDF7D7E1FFC71CA004207F6 /* Main.storyboard */; };
 		DEDF7D821FFC71CA004207F6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DEDF7D811FFC71CA004207F6 /* Assets.xcassets */; };
 		DEDF7D851FFC71CA004207F6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DEDF7D831FFC71CA004207F6 /* LaunchScreen.storyboard */; };
 		DEDF7D901FFC71CA004207F6 /* BanterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEDF7D8F1FFC71CA004207F6 /* BanterTests.swift */; };
 		DEDF7D9B1FFC71CA004207F6 /* BanterUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEDF7D9A1FFC71CA004207F6 /* BanterUITests.swift */; };
-		DEDF7DA91FFC71E8004207F6 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEDF7DA81FFC71E8004207F6 /* LoginViewController.swift */; };
 		DEDF7DAB1FFC7217004207F6 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEDF7DAA1FFC7217004207F6 /* SignUpViewController.swift */; };
 		DEDF7DAD1FFC7225004207F6 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEDF7DAC1FFC7225004207F6 /* WelcomeViewController.swift */; };
-		DEDF7DAF1FFC728F004207F6 /* ResetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEDF7DAE1FFC728F004207F6 /* ResetPasswordViewController.swift */; };
-		DEDF7DB11FFC72B0004207F6 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEDF7DB01FFC72B0004207F6 /* ProfileViewController.swift */; };
 		DEDF7DB51FFC90B4004207F6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DEDF7DB41FFC90B4004207F6 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
@@ -46,6 +47,10 @@
 		39976FB289CE8D69259C497F /* Pods-Banter.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Banter.release.xcconfig"; path = "Pods/Target Support Files/Pods-Banter/Pods-Banter.release.xcconfig"; sourceTree = "<group>"; };
 		3A58DEC8A896B88F2174AB67 /* Pods-Banter.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Banter.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Banter/Pods-Banter.debug.xcconfig"; sourceTree = "<group>"; };
 		BFCEB2B822160AE0DC668F37 /* Pods-BanterUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BanterUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BanterUITests/Pods-BanterUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		DEB4523C200B318500C3B692 /* SignInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+		DEB45240200B3D3400C3B692 /* DisplayUserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayUserViewController.swift; sourceTree = "<group>"; };
+		DED5F1491FFE00ED00F83129 /* CognitoConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CognitoConfig.swift; sourceTree = "<group>"; };
+		DED5F14B1FFE018100F83129 /* CognitoConfig.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = CognitoConfig.plist; sourceTree = "<group>"; };
 		DEDF7D771FFC71CA004207F6 /* Banter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Banter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DEDF7D7A1FFC71CA004207F6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DEDF7D7F1FFC71CA004207F6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -58,11 +63,8 @@
 		DEDF7D961FFC71CA004207F6 /* BanterUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BanterUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DEDF7D9A1FFC71CA004207F6 /* BanterUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BanterUITests.swift; sourceTree = "<group>"; };
 		DEDF7D9C1FFC71CA004207F6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		DEDF7DA81FFC71E8004207F6 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		DEDF7DAA1FFC7217004207F6 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		DEDF7DAC1FFC7225004207F6 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
-		DEDF7DAE1FFC728F004207F6 /* ResetPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordViewController.swift; sourceTree = "<group>"; };
-		DEDF7DB01FFC72B0004207F6 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		DEDF7DB41FFC90B4004207F6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		F23ED0413754EC446FEC59E2 /* Pods_BanterUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BanterUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4A3F70B888345F40224455A /* Pods-BanterTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BanterTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BanterTests/Pods-BanterTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -148,10 +150,11 @@
 			isa = PBXGroup;
 			children = (
 				DEDF7D7A1FFC71CA004207F6 /* AppDelegate.swift */,
-				DEDF7DA81FFC71E8004207F6 /* LoginViewController.swift */,
-				DEDF7DAE1FFC728F004207F6 /* ResetPasswordViewController.swift */,
-				DEDF7DB01FFC72B0004207F6 /* ProfileViewController.swift */,
+				DED5F1491FFE00ED00F83129 /* CognitoConfig.swift */,
+				DEB4523C200B318500C3B692 /* SignInViewController.swift */,
+				DED5F14B1FFE018100F83129 /* CognitoConfig.plist */,
 				DEDF7DAA1FFC7217004207F6 /* SignUpViewController.swift */,
+				DEB45240200B3D3400C3B692 /* DisplayUserViewController.swift */,
 				DEDF7DAC1FFC7225004207F6 /* WelcomeViewController.swift */,
 				DEDF7D7E1FFC71CA004207F6 /* Main.storyboard */,
 				DEDF7D811FFC71CA004207F6 /* Assets.xcassets */,
@@ -297,6 +300,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DEDF7D851FFC71CA004207F6 /* LaunchScreen.storyboard in Resources */,
+				DED5F14C1FFE018100F83129 /* CognitoConfig.plist in Resources */,
 				DEDF7DB51FFC90B4004207F6 /* GoogleService-Info.plist in Resources */,
 				DEDF7D821FFC71CA004207F6 /* Assets.xcassets in Resources */,
 				DEDF7D801FFC71CA004207F6 /* Main.storyboard in Resources */,
@@ -327,15 +331,15 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Banter/Pods-Banter-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
-				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
-				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+				"${BUILT_PRODUCTS_DIR}/AWSCognitoIdentityProvider/AWSCognitoIdentityProvider.framework",
+				"${BUILT_PRODUCTS_DIR}/AWSCognitoIdentityProviderASF/AWSCognitoIdentityProviderASF.framework",
+				"${BUILT_PRODUCTS_DIR}/AWSCore/AWSCore.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AWSCognitoIdentityProvider.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AWSCognitoIdentityProviderASF.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AWSCore.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -478,10 +482,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DEDF7DB11FFC72B0004207F6 /* ProfileViewController.swift in Sources */,
-				DEDF7DA91FFC71E8004207F6 /* LoginViewController.swift in Sources */,
+				DEB45241200B3D3400C3B692 /* DisplayUserViewController.swift in Sources */,
+				DED5F14A1FFE00ED00F83129 /* CognitoConfig.swift in Sources */,
+				DEB4523D200B318500C3B692 /* SignInViewController.swift in Sources */,
 				DEDF7DAD1FFC7225004207F6 /* WelcomeViewController.swift in Sources */,
-				DEDF7DAF1FFC728F004207F6 /* ResetPasswordViewController.swift in Sources */,
 				DEDF7DAB1FFC7217004207F6 /* SignUpViewController.swift in Sources */,
 				DEDF7D7B1FFC71CA004207F6 /* AppDelegate.swift in Sources */,
 			);
