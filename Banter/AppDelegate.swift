@@ -22,12 +22,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
     var signInViewController: SignInViewController?
     var navigationController: UINavigationController?
+    var storyboard: UIStoryboard?
     
     var cognitoConfig:CognitoConfig?
     
-    var storyboard: UIStoryboard? {
-        return UIStoryboard(name: "Main", bundle: nil)
-    }
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
@@ -59,6 +57,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         // fetch the user pool client we initialized in above step
         let pool = AWSCognitoIdentityUserPool(forKey: AWSCognitoUserPoolsSignInProviderKey)
+        self.storyboard = UIStoryboard(name: "Main", bundle: nil)
         
         pool.delegate = self
         
@@ -94,7 +93,7 @@ extension AppDelegate: AWSCognitoIdentityInteractiveAuthenticationDelegate {
     
     func startPasswordAuthentication() -> AWSCognitoIdentityPasswordAuthentication {
         if (self.navigationController == nil) {
-            self.navigationController = self.storyboard?.instantiateViewController(withIdentifier: "SignInViewController") as? UINavigationController
+            self.navigationController = self.storyboard?.instantiateViewController(withIdentifier: "signinController") as? UINavigationController
         }
         
         if (self.signInViewController == nil) {

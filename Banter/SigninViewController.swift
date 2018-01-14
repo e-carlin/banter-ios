@@ -25,10 +25,8 @@ class SignInViewController: UIViewController {
     }
     
     @IBAction func SignInPressed(_ sender: AnyObject) {
-        print("******** LOGIN PRESSED*********")
         guard let emailAddress = self.emailTextField.text, !emailAddress.isEmpty,
         let password = self.passwordTextField.text, !password.isEmpty else {
-            print("SOMETHING WAS EMPTY")
             let alertController = UIAlertController(title: "Sign In Error", message: "Please make sure you supply a valid email and password.", preferredStyle: .alert)
             let okayAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
             alertController.addAction(okayAction)
@@ -39,14 +37,16 @@ class SignInViewController: UIViewController {
         }
         let authDetails = AWSCognitoIdentityPasswordAuthenticationDetails(username: self.emailTextField.text!, password: self.passwordTextField.text! )
         self.passwordAuthenticationCompletion?.set(result: authDetails)
-        print("DETAILS: \(authDetails?.username)")
+    }
+    
+    @IBAction func SignUpPressed(_ sender: AnyObject) {
+        self.shouldPerformSegue(withIdentifier: "signUpSegue", sender: self)
     }
 }
 
 extension SignInViewController: AWSCognitoIdentityPasswordAuthentication {
     
     public func getDetails(_ authenticationInput: AWSCognitoIdentityPasswordAuthenticationInput, passwordAuthenticationCompletionSource: AWSTaskCompletionSource<AWSCognitoIdentityPasswordAuthenticationDetails>) {
-        print("GET DETAILS CALLED")
         self.passwordAuthenticationCompletion = passwordAuthenticationCompletionSource
         DispatchQueue.main.async {
             if (self.usernameText == nil) {
@@ -56,10 +56,8 @@ extension SignInViewController: AWSCognitoIdentityPasswordAuthentication {
     }
     
     public func didCompleteStepWithError(_ error: Error?) {
-        print("Did complete step with error callled")
         DispatchQueue.main.async {
             if let error = error as NSError? {
-                print("ERROR: \(error)")
                 let alertController = UIAlertController(title: error.userInfo["__type"] as? String,
                                                         message: error.userInfo["message"] as? String,
                                                         preferredStyle: .alert)
@@ -68,7 +66,6 @@ extension SignInViewController: AWSCognitoIdentityPasswordAuthentication {
                 
                 self.present(alertController, animated: true, completion:  nil)
             } else {
-                print("****** No error")
                 self.emailTextField.text = nil
                 self.dismiss(animated: true, completion: nil)
             }

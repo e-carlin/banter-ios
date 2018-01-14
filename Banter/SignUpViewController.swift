@@ -24,6 +24,10 @@ class SignUpViewController: UIViewController {
         self.pool = AWSCognitoIdentityUserPool.init(forKey: AWSCognitoUserPoolsSignInProviderKey)
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationController?.setNavigationBarHidden(false, animated: false)
+    }
+    
     @IBAction func registerAccount(sender: UIButton) {
         // Validate the input
         guard let name = nameTextField.text, name != "",

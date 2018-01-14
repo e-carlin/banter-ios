@@ -21,7 +21,6 @@
 		DEDF7D901FFC71CA004207F6 /* BanterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEDF7D8F1FFC71CA004207F6 /* BanterTests.swift */; };
 		DEDF7D9B1FFC71CA004207F6 /* BanterUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEDF7D9A1FFC71CA004207F6 /* BanterUITests.swift */; };
 		DEDF7DAB1FFC7217004207F6 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEDF7DAA1FFC7217004207F6 /* SignUpViewController.swift */; };
-		DEDF7DAD1FFC7225004207F6 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEDF7DAC1FFC7225004207F6 /* WelcomeViewController.swift */; };
 		DEDF7DB51FFC90B4004207F6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DEDF7DB41FFC90B4004207F6 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
@@ -64,7 +63,6 @@
 		DEDF7D9A1FFC71CA004207F6 /* BanterUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BanterUITests.swift; sourceTree = "<group>"; };
 		DEDF7D9C1FFC71CA004207F6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DEDF7DAA1FFC7217004207F6 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
-		DEDF7DAC1FFC7225004207F6 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		DEDF7DB41FFC90B4004207F6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		F23ED0413754EC446FEC59E2 /* Pods_BanterUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BanterUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4A3F70B888345F40224455A /* Pods-BanterTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BanterTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BanterTests/Pods-BanterTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -155,7 +153,6 @@
 				DED5F14B1FFE018100F83129 /* CognitoConfig.plist */,
 				DEDF7DAA1FFC7217004207F6 /* SignUpViewController.swift */,
 				DEB45240200B3D3400C3B692 /* DisplayUserViewController.swift */,
-				DEDF7DAC1FFC7225004207F6 /* WelcomeViewController.swift */,
 				DEDF7D7E1FFC71CA004207F6 /* Main.storyboard */,
 				DEDF7D811FFC71CA004207F6 /* Assets.xcassets */,
 				DEDF7D831FFC71CA004207F6 /* LaunchScreen.storyboard */,
@@ -485,7 +482,6 @@
 				DEB45241200B3D3400C3B692 /* DisplayUserViewController.swift in Sources */,
 				DED5F14A1FFE00ED00F83129 /* CognitoConfig.swift in Sources */,
 				DEB4523D200B318500C3B692 /* SignInViewController.swift in Sources */,
-				DEDF7DAD1FFC7225004207F6 /* WelcomeViewController.swift in Sources */,
 				DEDF7DAB1FFC7217004207F6 /* SignUpViewController.swift in Sources */,
 				DEDF7D7B1FFC71CA004207F6 /* AppDelegate.swift in Sources */,
 			);

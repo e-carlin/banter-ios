@@ -12,20 +12,20 @@
     </dependencies>
     <scenes>
         <!--Navigation Controller-->
-        <scene sceneID="WZ5-pK-YtM">
+        <scene sceneID="kb4-I7-0DC">
             <objects>
-                <navigationController storyboardIdentifier="SignInViewController" automaticallyAdjustsScrollViewInsets="NO" id="iFr-pl-mgA" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="fru-6F-Dyh">
+                <navigationController storyboardIdentifier="signinController" id="vbc-3T-JcT" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ZyV-j8-tEU">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="aQW-tY-AjK" kind="relationship" relationship="rootViewController" id="TIE-ri-m1p"/>
+                        <segue destination="aQW-tY-AjK" kind="relationship" relationship="rootViewController" id="u3r-nj-Lzt"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="wX3-Tx-f6h" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AhJ-k8-4jZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="974" y="34"/>
+            <point key="canvasLocation" x="-1622" y="-385"/>
         </scene>
         <!--Sign In View Controller-->
         <scene sceneID="JmK-lJ-H4A">
@@ -48,9 +48,9 @@
                                 </userDefinedRuntimeAttributes>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9mT-OI-bR5">
-                                <rect key="frame" x="168" y="279" width="38" height="30"/>
+                                <rect key="frame" x="164" y="279" width="47" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Login"/>
+                                <state key="normal" title="Sign In"/>
                                 <connections>
                                     <action selector="SignInPressed:" destination="aQW-tY-AjK" eventType="touchUpInside" id="qU2-Qa-7bE"/>
                                 </connections>
@@ -67,6 +67,15 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eZe-RZ-Aab">
+                                <rect key="frame" x="160" y="355" width="55" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Sign Up"/>
+                                <connections>
+                                    <action selector="SignUpPressed:" destination="aQW-tY-AjK" eventType="touchUpInside" id="Rva-U4-tSG"/>
+                                    <segue destination="Mgg-ZL-HCN" kind="show" identifier="signUpSegue" id="md2-AP-8u9"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <viewLayoutGuide key="safeArea" id="Bac-22-4Ez"/>
@@ -76,43 +85,20 @@
                             </userDefinedRuntimeAttribute>
                         </userDefinedRuntimeAttributes>
                     </view>
-                    <navigationItem key="navigationItem" id="hrZ-oh-gcv">
-                        <barButtonItem key="rightBarButtonItem" title="Cancel" id="ry3-sh-Wwr">
-                            <connections>
-                                <segue destination="m5X-e0-vfT" kind="unwind" unwindAction="unwindtoWelcomeViewWithSegue:" id="kP6-ma-cqr"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" id="8DR-HS-nlq"/>
                     <connections>
                         <outlet property="emailTextField" destination="vWq-RG-QLW" id="Dya-dh-IC8"/>
                         <outlet property="passwordTextField" destination="yh4-AA-AxG" id="Flb-FG-pNX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fod-Bu-bVi" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <exit id="m5X-e0-vfT" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1776.8" y="33.733133433283363"/>
+            <point key="canvasLocation" x="-655" y="-384"/>
         </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="bsY-cs-Vh1">
-            <objects>
-                <navigationController id="zx1-N9-DpN" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Jib-1H-DLM">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="Mgg-ZL-HCN" kind="relationship" relationship="rootViewController" id="PEo-4z-PIq"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="1my-6I-gqQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="974" y="805"/>
-        </scene>
-        <!--Sign Up View Controller-->
+        <!--Register-->
         <scene sceneID="j8F-me-G2x">
             <objects>
-                <viewController id="Mgg-ZL-HCN" customClass="SignUpViewController" customModule="Banter" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Register" id="Mgg-ZL-HCN" customClass="SignUpViewController" customModule="Banter" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="0ky-rF-BB6">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -165,13 +151,6 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <viewLayoutGuide key="safeArea" id="e9u-2Z-nxa"/>
                     </view>
-                    <navigationItem key="navigationItem" id="LLS-ho-8dl">
-                        <barButtonItem key="rightBarButtonItem" title="Cancel" id="QWZ-oN-vvW">
-                            <connections>
-                                <segue destination="4r0-wz-aqw" kind="unwind" unwindAction="unwindtoWelcomeViewWithSegue:" id="zfs-Jf-qrh"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
                     <connections>
                         <outlet property="emailTextField" destination="tuH-q8-axf" id="4hY-k1-P4E"/>
                         <outlet property="nameTextField" destination="A9z-e0-SGf" id="bHE-fV-OIO"/>
@@ -179,9 +158,8 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Knm-63-49v" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <exit id="4r0-wz-aqw" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1777" y="785"/>
+            <point key="canvasLocation" x="286" y="-385"/>
         </scene>
         <!--Display User View Controller-->
         <scene sceneID="fik-lR-moL">
@@ -191,7 +169,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                        <button key="tableFooterView" opaque="NO" alpha="0.94999998807907104" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="aB0-YI-rUV">
+                        <button key="tableFooterView" opaque="NO" alpha="0.94999998807907104" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="aB0-YI-rUV">
                             <rect key="frame" x="0.0" y="161.5" width="375" height="44"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <color key="backgroundColor" red="1" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -288,7 +266,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SPm-W1-6Jc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-695" y="788"/>
+            <point key="canvasLocation" x="-618" y="400"/>
         </scene>
     </scenes>
 </document>
