@@ -10,9 +10,6 @@
 		2D7A9B6F97C21F7706342012 /* Pods_Banter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF29EB05F599D152D1234C3B /* Pods_Banter.framework */; };
 		9D5109D51FE2804987ED06F6 /* Pods_BanterUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F23ED0413754EC446FEC59E2 /* Pods_BanterUITests.framework */; };
 		A2FCF523251B7E0F0DFF2A57 /* Pods_BanterTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F14244CE9C6C255757DB60C /* Pods_BanterTests.framework */; };
-		DE52AB73200DBD29002A79C2 /* AddAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE52AB72200DBD29002A79C2 /* AddAccountViewController.swift */; };
-		DE52AB77200DC0E2002A79C2 /* PlaidConfig.plist in Resources */ = {isa = PBXBuildFile; fileRef = DE52AB76200DC0E2002A79C2 /* PlaidConfig.plist */; };
-		DE52AB79200DC0EE002A79C2 /* PlaidConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE52AB78200DC0EE002A79C2 /* PlaidConfig.swift */; };
 		DEB4523D200B318500C3B692 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB4523C200B318500C3B692 /* SignInViewController.swift */; };
 		DEB45241200B3D3400C3B692 /* DisplayUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB45240200B3D3400C3B692 /* DisplayUserViewController.swift */; };
 		DED5F14A1FFE00ED00F83129 /* CognitoConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = DED5F1491FFE00ED00F83129 /* CognitoConfig.swift */; };
@@ -49,9 +46,6 @@
 		39976FB289CE8D69259C497F /* Pods-Banter.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Banter.release.xcconfig"; path = "Pods/Target Support Files/Pods-Banter/Pods-Banter.release.xcconfig"; sourceTree = "<group>"; };
 		3A58DEC8A896B88F2174AB67 /* Pods-Banter.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Banter.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Banter/Pods-Banter.debug.xcconfig"; sourceTree = "<group>"; };
 		BFCEB2B822160AE0DC668F37 /* Pods-BanterUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BanterUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BanterUITests/Pods-BanterUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		DE52AB72200DBD29002A79C2 /* AddAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAccountViewController.swift; sourceTree = "<group>"; };
-		DE52AB76200DC0E2002A79C2 /* PlaidConfig.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = PlaidConfig.plist; sourceTree = "<group>"; };
-		DE52AB78200DC0EE002A79C2 /* PlaidConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaidConfig.swift; sourceTree = "<group>"; };
 		DEB4523C200B318500C3B692 /* SignInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		DEB45240200B3D3400C3B692 /* DisplayUserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayUserViewController.swift; sourceTree = "<group>"; };
 		DED5F1491FFE00ED00F83129 /* CognitoConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CognitoConfig.swift; sourceTree = "<group>"; };
@@ -137,15 +131,6 @@
 			path = CognitoConfig;
 			sourceTree = "<group>";
 		};
-		DE52AB75200DC0C8002A79C2 /* PlaidConfig */ = {
-			isa = PBXGroup;
-			children = (
-				DE52AB76200DC0E2002A79C2 /* PlaidConfig.plist */,
-				DE52AB78200DC0EE002A79C2 /* PlaidConfig.swift */,
-			);
-			path = PlaidConfig;
-			sourceTree = "<group>";
-		};
 		DEDF7D6E1FFC71CA004207F6 = {
 			isa = PBXGroup;
 			children = (
@@ -171,13 +156,11 @@
 		DEDF7D791FFC71CA004207F6 /* Banter */ = {
 			isa = PBXGroup;
 			children = (
-				DE52AB75200DC0C8002A79C2 /* PlaidConfig */,
 				DE52AB71200BEA99002A79C2 /* CognitoConfig */,
 				DEDF7D7A1FFC71CA004207F6 /* AppDelegate.swift */,
 				DEB4523C200B318500C3B692 /* SignInViewController.swift */,
 				DEDF7DAA1FFC7217004207F6 /* SignUpViewController.swift */,
 				DEB45240200B3D3400C3B692 /* DisplayUserViewController.swift */,
-				DE52AB72200DBD29002A79C2 /* AddAccountViewController.swift */,
 				DEDF7D7E1FFC71CA004207F6 /* Main.storyboard */,
 				DEDF7D811FFC71CA004207F6 /* Assets.xcassets */,
 				DEDF7D831FFC71CA004207F6 /* LaunchScreen.storyboard */,
@@ -327,7 +310,6 @@
 				DEDF7DB51FFC90B4004207F6 /* GoogleService-Info.plist in Resources */,
 				DEDF7D821FFC71CA004207F6 /* Assets.xcassets in Resources */,
 				DEDF7D801FFC71CA004207F6 /* Main.storyboard in Resources */,
-				DE52AB77200DC0E2002A79C2 /* PlaidConfig.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -525,9 +507,7 @@
 				DEB45241200B3D3400C3B692 /* DisplayUserViewController.swift in Sources */,
 				DED5F14A1FFE00ED00F83129 /* CognitoConfig.swift in Sources */,
 				DEB4523D200B318500C3B692 /* SignInViewController.swift in Sources */,
-				DE52AB79200DC0EE002A79C2 /* PlaidConfig.swift in Sources */,
 				DEDF7DAB1FFC7217004207F6 /* SignUpViewController.swift in Sources */,
-				DE52AB73200DBD29002A79C2 /* AddAccountViewController.swift in Sources */,
 				DEDF7D7B1FFC71CA004207F6 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

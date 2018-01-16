@@ -10,8 +10,7 @@ import UIKit
 import AWSCognitoIdentityProvider
 
 let AWSCognitoUserPoolsSignInProviderKey = "UserPool"
-var cognitoConfig:CognitoConfig?
-var plaidConfig:PlaidConfig?
+var cognitoConfig:CognitoConfig? //TODO: This is declared here and within the class, pick one
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -22,7 +21,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var storyboard: UIStoryboard?
     
     var cognitoConfig:CognitoConfig?
-    var plaidConfig:PlaidConfig?
     
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
@@ -50,9 +48,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.storyboard = UIStoryboard(name: "Main", bundle: nil)
         
         pool.delegate = self
-        
-        //Setup Plaid Config
-        self.plaidConfig = PlaidConfig()
         
         return true
     }
