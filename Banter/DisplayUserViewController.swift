@@ -56,9 +56,13 @@ class DisplayUserViewController: UITableViewController {
         return values?.first?.value
     }
     
-    @IBAction func logout(_ sender:AnyObject) {
+    @IBAction func logoutButtonPressed(_ sender:AnyObject) {
         user?.signOut()
         self.fetchUserAttributes()
+    }
+    
+    @IBAction func addAccountButtonPressed(_ sender:AnyObject) {
+        self.shouldPerformSegue(withIdentifier: "addAccountSegue", sender: self)
     }
     
 }

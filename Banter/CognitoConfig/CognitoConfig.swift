@@ -29,28 +29,13 @@ class CognitoConfig: NSObject {
         return nil
     }
     
-    func getPoolId() -> String {
-        let poolId = self.keys?["poolId"] as? String
-        guard poolId != nil else {
-            fatalError("You must specify a poolId in your CognitoConfig.plist file")
+    func getValue(key: String) -> String {
+        let value = self.keys?[key] as? String
+        
+        guard value != nil else {
+            fatalError("You must specify a \(key) in your CognitoConfig.plist file")
         }
-        return poolId!
-    }
-    
-    func getClientId() -> String {
-        let clientId = self.keys?["clientId"] as? String
-        guard clientId != nil else {
-            fatalError("You must specify a clientlId in your CognitoConfig.plist file")
-        }
-        return clientId!
-    }
-    
-    func getClientSecret() -> String {
-        let clientSecret = self.keys?["clientSecret"] as? String
-        guard clientSecret != nil else {
-            fatalError("You must specify a clientSecret in your CognitoConfig.plist file")
-        }
-        return clientSecret!
+        return value!
     }
     
     func getRegion() -> AWSRegionType {

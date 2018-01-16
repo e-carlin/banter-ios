@@ -36,9 +36,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let serviceConfiguration = AWSServiceConfiguration(region: self.cognitoConfig!.getRegion(), credentialsProvider: nil)
         
         // create pool configuration
-        let poolConfiguration = AWSCognitoIdentityUserPoolConfiguration(clientId: self.cognitoConfig!.getClientId(),
-                                                                        clientSecret: self.cognitoConfig!.getClientSecret(),
-                                                                        poolId: self.cognitoConfig!.getPoolId())
+        let poolConfiguration = AWSCognitoIdentityUserPoolConfiguration(clientId: self.cognitoConfig!.getValue(key: "clientId"),
+                                                                        clientSecret: self.cognitoConfig!.getValue(key: "clientSecret"),
+                                                                        poolId: self.cognitoConfig!.getValue(key: "poolId"))
         
         // initialize user pool client
         AWSCognitoIdentityUserPool.register(with: serviceConfiguration, userPoolConfiguration: poolConfiguration, forKey: AWSCognitoUserPoolsSignInProviderKey)

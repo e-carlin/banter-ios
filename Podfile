@@ -10,6 +10,7 @@ target 'Banter' do
 #  pod 'Firebase/Auth'
 pod 'AWSCore', '~> 2.6.10'
 pod 'AWSCognitoIdentityProvider', '~> 2.6.10'
+pod 'Plaid'
 
   target 'BanterTests' do
     inherit! :search_paths
