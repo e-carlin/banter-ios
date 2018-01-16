@@ -1,14 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
-<!--
-   PlaidConfig.plist
-   Banter
-
-   Created by e-carlin on 1/15/18.
-   Copyright (c) 2018 Banter. All rights reserved.
--->
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
-    <dict>
-    
-    </dict>
+<dict>
+	<key>clientName</key>
+	<string>CLIENT NAME????</string>
+	<key>key</key>
+	<string>74912a00575badb2f1b0f1b8bdfde2</string>
+	<key>env</key>
+	<string>sandbox</string>
+	<key>product</key>
+	<array>
+		<string>auth</string>
+		<string>transactions</string>
+	</array>
+</dict>
 </plist>

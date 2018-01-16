@@ -8,7 +8,7 @@
 
 import Foundation
 
-class PlaidConfi: NSObject {
+class PlaidConfig: NSObject {
     var keys:Dictionary<String, Any>?
     
     override init() {
@@ -25,6 +25,15 @@ class PlaidConfi: NSObject {
             return keys as? Dictionary<String,Any>
         }
         return nil
+    }
+    
+    func getValue(key: String) -> String {
+        let value = self.keys?[key] as? String
+        
+        guard value != nil else {
+            fatalError("You must specify a \(key) in your CognitoConfig.plist file")
+        }
+        return value!
     }
 }
 
