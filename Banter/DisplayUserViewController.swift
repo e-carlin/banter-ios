@@ -91,8 +91,10 @@ extension DisplayUserViewController : PLKPlaidLinkViewDelegate {
     func linkViewController(_ linkViewController: PLKPlaidLinkViewController, didSucceedWithPublicToken publicToken: String, metadata: [String : Any]?) {
         dismiss(animated: true) {
             // Handle success, e.g. by storing publicToken with your service
-            NSLog("Successfully linked account!\npublicToken: \(publicToken)\nmetadata: \(metadata ?? [:])")
+            NSLog("Successfully got public token!\npublicToken: \(publicToken)\nmetadata: \(metadata ?? [:])")
 //            self.handleSuccessWithToken(publicToken, metadata: metadata)
+            NSLog("About to exchange public key...")
+            PlaidHelper.exchangePublicKey(publicToken: publicToken);
         }
     }
     
