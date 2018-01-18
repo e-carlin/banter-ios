@@ -11,7 +11,7 @@ import Foundation
 public struct PlaidHelper {
     internal static let plaidBaseURLAsString = "http://127.0.0.1:5000"
     
-    public static func exchangePublicKey(publicToken: String) {
+    public static func exchangePublicKey(publicToken: String, metadata: [String : Any]?) {
         let exchangePublicTokenEndpoint = "exchange_plaid_public_token"
         //Make call to my API
         guard let exchangePublicTokenURL = URL(string: "\(plaidBaseURLAsString)/\(exchangePublicTokenEndpoint)") else {
@@ -22,7 +22,14 @@ public struct PlaidHelper {
         request.httpMethod = "POST"
         request.setValue("Application/json", forHTTPHeaderField: "Content-Type")
         
-        let bodyAsDict = ["public_token" : publicToken]
+        var bodyAsDict : [String : Any]
+        if let metadataValue = metadata {
+            bodyAsDict = ["public_token" : publicToken, "metadata" : metadataValue]
+        }
+        else {
+            bodyAsDict = ["public_token" : publicToken]
+        }
+        
         do {
             
             let bodyAsJSON = try JSONSerialization.data(withJSONObject: bodyAsDict, options: [])

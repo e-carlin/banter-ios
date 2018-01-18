@@ -92,9 +92,8 @@ extension DisplayUserViewController : PLKPlaidLinkViewDelegate {
         dismiss(animated: true) {
             // Handle success, e.g. by storing publicToken with your service
             NSLog("Successfully got public token!\npublicToken: \(publicToken)\nmetadata: \(metadata ?? [:])")
-//            self.handleSuccessWithToken(publicToken, metadata: metadata)
             NSLog("About to exchange public key...")
-            PlaidHelper.exchangePublicKey(publicToken: publicToken);
+            PlaidHelper.exchangePublicKey(publicToken: publicToken, metadata: metadata)
         }
     }
     
